@@ -7,23 +7,28 @@ const NAV_LINKS = ['About', 'Heritage', 'Structure', 'Approach', 'Contact']
 const COMPANIES = [
   {
     name: 'Sheibarg',
-    description: 'Strategic holding and operational oversight across diversified business interests.',
+    description: 'Tin can manufacturing — specialists in general line cans.',
+    image: '/images/sheibarg.jpg',
   },
   {
     name: 'Barplas',
-    description: 'Industrial plastics manufacturing with a focus on precision-engineered components.',
+    description: 'Plastic container manufacturing — injection moulding and printing for industrial and consumer brands.',
+    image: '/images/barplas.jpg',
   },
   {
     name: 'Imago Design',
-    description: 'Creative and architectural design consultancy serving premium residential and commercial clients.',
+    description: 'Creative product design and development — from concept to mass production.',
+    image: '/images/imago.jpg',
   },
   {
     name: 'Bradford Industrial Properties',
-    description: 'Commercial and industrial real estate acquisition, development, and long-term asset management.',
+    description: 'Commercial and industrial property development and management.',
+    image: '/images/bradford.jpg',
   },
   {
-    name: 'Littlecote Soap Manufacturing',
-    description: 'Artisan consumer goods production with an emphasis on quality formulation and brand integrity.',
+    name: 'Littlecote Soap',
+    description: 'Artisan toiletries and natural soaps — handmade in North Yorkshire.',
+    image: '/images/littlecote.jpg',
   },
 ]
 
@@ -240,15 +245,14 @@ function About() {
         />
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Image placeholder */}
+          {/* Principal photo */}
           <div className="relative">
-            <div className="aspect-[3/4] bg-slate-800 border border-slate-700 flex items-center justify-center">
-              <div className="text-center">
-                <svg className="w-16 h-16 text-slate-600 mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-                <p className="text-slate-600 text-xs tracking-widest uppercase">Principal Photo</p>
-              </div>
+            <div className="aspect-[3/4] overflow-hidden border border-slate-700">
+              <img
+                src="/images/principal.jpg"
+                alt="The Principal"
+                className="w-full h-full object-cover object-top"
+              />
             </div>
             <div className="absolute -bottom-4 -right-4 w-full h-full border border-amber-400/20 -z-10" />
           </div>
@@ -274,7 +278,7 @@ function About() {
             </p>
 
             <div className="grid grid-cols-3 gap-6 pt-4 border-t border-slate-800">
-              {[['20+', 'Years Operating'], ['5', 'Companies Built'], ['Multi-Gen', 'Focus']].map(([val, lbl]) => (
+              {[['40+', 'Years Operating'], ['5', 'Companies Built'], ['Multi-Gen', 'Focus']].map(([val, lbl]) => (
                 <div key={lbl} className="text-center">
                   <p className="text-amber-400 font-serif text-xl mb-1">{val}</p>
                   <p className="text-slate-500 text-xs tracking-wider uppercase">{lbl}</p>
@@ -302,26 +306,29 @@ function Heritage() {
           {COMPANIES.map((company, i) => (
             <div
               key={company.name}
-              className="group relative bg-slate-800/50 border border-slate-700 p-8 hover:border-amber-400/50 transition-all duration-300"
+              className="group relative overflow-hidden h-72 hover:scale-[1.02] transition-transform duration-300"
             >
-              {/* Corner accent */}
-              <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-amber-400/40 group-hover:border-amber-400 transition-colors duration-300" />
+              {/* Background image */}
+              <img
+                src={company.image}
+                alt={company.name}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
 
-              <p className="text-amber-400/50 font-serif text-3xl mb-4 font-light">
-                {String(i + 1).padStart(2, '0')}
-              </p>
-              <h3 className="font-serif text-xl text-white mb-3 font-light">{company.name}</h3>
-              <div className="w-6 h-px bg-amber-400/40 mb-4 group-hover:bg-amber-400 transition-colors duration-300" />
-              <p className="text-slate-400 text-sm leading-relaxed font-light">{company.description}</p>
+              {/* Gradient overlay for readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent" />
+
+              {/* Text overlay */}
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <p className="text-amber-400/50 font-serif text-2xl mb-2 font-light">
+                  {String(i + 1).padStart(2, '0')}
+                </p>
+                <h3 className="font-serif text-xl text-white mb-2 font-light">{company.name}</h3>
+                <div className="w-6 h-px bg-amber-400/60 mb-3 group-hover:bg-amber-400 transition-colors duration-300" />
+                <p className="text-slate-300 text-sm leading-relaxed font-light">{company.description}</p>
+              </div>
             </div>
           ))}
-
-          {/* Placeholder sixth card for visual balance on 3-col grid */}
-          <div className="hidden lg:flex bg-slate-800/20 border border-slate-800 p-8 items-center justify-center">
-            <p className="text-slate-700 text-xs tracking-[0.3em] uppercase text-center">
-              Ongoing<br />Ventures
-            </p>
-          </div>
         </div>
       </div>
     </section>
