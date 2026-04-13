@@ -436,7 +436,6 @@ function Contact() {
         <SectionHeader
           label="Contact"
           title="Open a Conversation"
-          subtitle="3P Alpha Capital engages with qualified partners and investors on a selective basis. We welcome introductions from those who share our commitment to long-term, disciplined capital stewardship."
         />
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -449,7 +448,7 @@ function Contact() {
             <div>
               <p className="text-amber-400 text-xs tracking-[0.3em] uppercase mb-3">Location</p>
               <p className="text-slate-400 font-light text-sm leading-relaxed">
-                United Kingdom<br />
+                British Virgin Islands<br />
                 By appointment only
               </p>
             </div>
