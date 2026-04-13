@@ -444,7 +444,7 @@ function Contact() {
           <div className="space-y-8">
             <div>
               <p className="text-amber-400 text-xs tracking-[0.3em] uppercase mb-3">Enquiries</p>
-              <p className="text-slate-300 font-light">contact@3palpha.capital</p>
+              <p className="text-slate-300 font-light">contact@3palphacapital.com</p>
             </div>
             <div>
               <p className="text-amber-400 text-xs tracking-[0.3em] uppercase mb-3">Location</p>
