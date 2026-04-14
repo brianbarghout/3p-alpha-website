@@ -12,13 +12,8 @@ const COMPANIES = [
   },
   {
     name: 'Barplas',
-    description: '1994–2006. Co-founded and grew to become the second largest manufacturer of lever lid plastic containers in Britain. Sold in 2006.',
+    description: '1994–2006. Co-founded and grew to become the second largest manufacturer of lever lid plastic containers in Britain.',
     image: '/images/barplas.jpg',
-  },
-  {
-    name: 'Imago Design',
-    description: '1997–1998. Creative product design and development — from concept to mass production.',
-    image: '/images/imago.jpg',
   },
   {
     name: 'Bradford Industrial Properties',
@@ -26,14 +21,19 @@ const COMPANIES = [
     image: '/images/bradford.jpg',
   },
   {
-    name: 'Littlecote Soap',
-    description: '2014–2016. Artisan toiletries and natural soaps — handmade in North Yorkshire.',
-    image: '/images/littlecote.jpg',
+    name: 'Imago Design',
+    description: '1997–1998. Creative product design and development — from concept to mass production.',
+    image: '/images/imago.jpg',
   },
   {
     name: 'Wicked Works',
     description: '2002–2004. Hand-cast bronze Harley Davidson shifter linkages — designed, sand-cast, and chrome-finished. Each piece individually made.',
     image: '/images/wickedworks.jpg',
+  },
+  {
+    name: 'Littlecote Soap',
+    description: '2014–2016. Artisan toiletries and natural soaps — handmade in North Yorkshire.',
+    image: '/images/littlecote.jpg',
   },
 ]
 
@@ -196,7 +196,7 @@ function Hero() {
         <p className="text-slate-300 text-base sm:text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto">
           Our purpose is to consolidate, preserve, and grow family assets across generations.
           Our mission is to support the education, opportunity, and financial security
-          of our family, and for charitable activities that reflect our values.
+          of our family and charitable activities that reflect our values.
         </p>
 
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -284,7 +284,7 @@ function About() {
             </p>
 
             <div className="grid grid-cols-3 gap-6 pt-4 border-t border-slate-800">
-              {[['40+', 'Years Operating'], ['5', 'Companies Built'], ['Multi-Gen', 'Focus']].map(([val, lbl]) => (
+              {[['40+', 'Years Operating'], ['6', 'Companies Built'], ['Multi-Gen', 'Focus']].map(([val, lbl]) => (
                 <div key={lbl} className="text-center">
                   <p className="text-amber-400 font-serif text-xl mb-1">{val}</p>
                   <p className="text-slate-500 text-xs tracking-wider uppercase">{lbl}</p>
