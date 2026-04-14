@@ -2,33 +2,38 @@ import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 
-const NAV_LINKS = ['About', 'Heritage', 'Structure', 'Approach', 'Contact']
+const NAV_LINKS = ['About', 'Heritage', 'Approach', 'Contact']
 
 const COMPANIES = [
   {
     name: 'Sheibarg',
-    description: 'Tin can manufacturing — specialists in general line cans.',
+    description: '1992–1994. Grew to become the largest independent manufacturer of metal lever lid containers in Britain.',
     image: '/images/sheibarg.jpg',
   },
   {
     name: 'Barplas',
-    description: 'Plastic container manufacturing — injection moulding and printing for industrial and consumer brands.',
+    description: '1994–2006. Co-founded and grew to become the second largest manufacturer of lever lid plastic containers in Britain. Sold in 2006.',
     image: '/images/barplas.jpg',
   },
   {
     name: 'Imago Design',
-    description: 'Creative product design and development — from concept to mass production.',
+    description: '1997–1998. Creative product design and development — from concept to mass production.',
     image: '/images/imago.jpg',
   },
   {
     name: 'Bradford Industrial Properties',
-    description: 'Commercial and industrial property development and management.',
+    description: '1994–2025. Commercial and industrial property development and management.',
     image: '/images/bradford.jpg',
   },
   {
     name: 'Littlecote Soap',
-    description: 'Artisan toiletries and natural soaps — handmade in North Yorkshire.',
+    description: '2014–2016. Artisan toiletries and natural soaps — handmade in North Yorkshire.',
     image: '/images/littlecote.jpg',
+  },
+  {
+    name: 'Wicked Works',
+    description: '2002–2004. Hand-cast bronze Harley Davidson shifter linkages — designed, sand-cast, and chrome-finished. Each piece individually made.',
+    image: '/images/wickedworks.jpg',
   },
 ]
 
@@ -189,8 +194,9 @@ function Hero() {
         <div className="w-16 h-px bg-amber-400 mx-auto mb-8" />
 
         <p className="text-slate-300 text-base sm:text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto">
-          Capital preservation. Systematic, methodical, quantitative trading.
-          Sustained portfolio growth for the benefit of the next generation.
+          Our purpose is to consolidate, preserve, and grow family assets across generations.
+          Our mission is to deploy this capital for education, opportunity, and financial security
+          for our family, and for charitable activities that reflect our values.
         </p>
 
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -259,22 +265,22 @@ function About() {
 
           {/* Bio */}
           <div className="space-y-6">
-            <h3 className="font-serif text-2xl text-white font-light">The Principal</h3>
-            <div className="w-8 h-px bg-amber-400" />
+            <h3 className="font-serif text-2xl text-white font-light">Brian Barghout</h3>
+            <p className="text-amber-400 text-xs tracking-[0.2em] uppercase mt-1">BSc Chemical Engineering · FRSA</p>
+            <div className="w-8 h-px bg-amber-400 mt-4" />
             <p className="text-slate-400 leading-relaxed font-light">
-              With a career spanning multiple industries and decades of operational leadership,
-              the principal of 3P Alpha Capital brings a rare combination of entrepreneurial
-              vision and disciplined capital management to the investment arena.
+              A chemical engineer by training, Brian has spent over four decades founding,
+              operating, and scaling businesses across manufacturing, product design,
+              industrial property, and consumer goods.
             </p>
             <p className="text-slate-400 leading-relaxed font-light">
-              Having founded, operated, and scaled businesses across manufacturing, design,
-              industrial property, and consumer goods, the principal's approach to capital
-              stewardship is forged from direct operating experience — not abstraction.
+              That depth of hands-on operating experience — building companies from the ground
+              up, managing production at scale, and navigating real-world commercial risk —
+              now informs a systematic, quantitative approach to capital stewardship.
             </p>
             <p className="text-slate-400 leading-relaxed font-light">
-              This depth of real-world business understanding informs a systematic, quantitative
-              trading philosophy that prizes risk management, consistency, and long-term
-              compounding over short-term gain.
+              3P Alpha Capital is the expression of that philosophy: disciplined risk management,
+              methodical execution, and long-term compounding in service of the next generation.
             </p>
 
             <div className="grid grid-cols-3 gap-6 pt-4 border-t border-slate-800">
@@ -302,18 +308,24 @@ function Heritage() {
           subtitle="A portfolio of operating companies built over decades, each demonstrating disciplined leadership and a commitment to long-term value creation."
         />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {COMPANIES.map((company, i) => (
             <div
               key={company.name}
-              className="group relative overflow-hidden h-72 hover:scale-[1.02] transition-transform duration-300"
+              className="group relative overflow-hidden h-72 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] hover:scale-[1.02] transition-transform duration-300"
             >
               {/* Background image */}
-              <img
-                src={company.image}
-                alt={company.name}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
+              {company.image ? (
+                <img
+                  src={company.image}
+                  alt={company.name}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              ) : (
+                <div className="absolute inset-0 bg-slate-800 flex items-center justify-center">
+                  <p className="text-slate-600 text-xs tracking-[0.3em] uppercase">Image Coming Soon</p>
+                </div>
+              )}
 
               {/* Gradient overlay for readability */}
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent" />
@@ -335,70 +347,12 @@ function Heritage() {
   )
 }
 
-function Structure() {
-  return (
-    <section id="structure" className="py-24 bg-slate-950">
-      <div className="max-w-6xl mx-auto px-6">
-        <SectionHeader
-          label="Fund Structure"
-          title="How We Operate"
-          subtitle="3P Alpha Capital is structured to ensure disciplined capital deployment, transparent governance, and alignment of interests between principal and partners."
-        />
-
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          <div className="space-y-8">
-            {[
-              {
-                title: 'Capital Preservation First',
-                body: 'Every allocation begins with downside assessment. We define acceptable loss before we define target return. Capital preservation is not a constraint on our strategy — it is the strategy.',
-              },
-              {
-                title: 'Quantitative Framework',
-                body: 'Our trading systems are rule-based and data-driven. Entry, exit, position sizing, and risk exposure are all governed by quantitative models, removing emotion from the decision-making process.',
-              },
-              {
-                title: 'Generational Mandate',
-                body: 'We operate with a time horizon that extends beyond the typical fund cycle. Our decisions are made with the next generation in mind, prioritising compounding consistency over near-term performance optics.',
-              },
-            ].map((item) => (
-              <div key={item.title} className="flex gap-6">
-                <div className="flex-shrink-0 w-px bg-amber-400/40 self-stretch" />
-                <div>
-                  <h3 className="text-white font-serif text-lg mb-2 font-light">{item.title}</h3>
-                  <p className="text-slate-400 text-sm leading-relaxed font-light">{item.body}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Structure diagram placeholder */}
-          <div className="bg-slate-800/30 border border-slate-700 p-10">
-            <p className="text-slate-500 text-xs tracking-[0.3em] uppercase mb-8 text-center">Fund Architecture</p>
-            <div className="space-y-4">
-              {['General Partner', 'Investment Committee', 'Quantitative Systems', 'Portfolio Execution', 'Risk Oversight'].map((layer, i) => (
-                <div key={layer} className="flex items-center gap-4">
-                  <div
-                    className="h-10 bg-slate-700 border-l-2 border-amber-400/60 flex items-center px-4 flex-1"
-                    style={{ marginLeft: `${i * 16}px` }}
-                  >
-                    <span className="text-slate-300 text-xs tracking-wider">{layer}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
 function Approach() {
   return (
     <section id="approach" className="py-24 bg-slate-900">
       <div className="max-w-6xl mx-auto px-6">
         <SectionHeader
-          label="Capital Stewardship Philosophy"
+          label="How We Operate"
           title="The Three Pillars"
         />
 
@@ -418,17 +372,40 @@ function Approach() {
           ))}
         </div>
 
-        {/* Extended philosophy */}
+        {/* Operating principles */}
+        <div className="mt-16 grid md:grid-cols-3 gap-8">
+          {[
+            {
+              title: 'Sole Principal',
+              body: 'All investment decisions are made by a single principal with full accountability. No committees, no layers — one decision-maker with direct operational responsibility.',
+            },
+            {
+              title: 'Systematic Methodology',
+              body: 'Entry, exit, position sizing, and risk exposure are governed by quantitative rules. Emotion is removed from the process; discipline and data drive every allocation.',
+            },
+            {
+              title: 'Professional Administration',
+              body: '3P Alpha Capital is a BVI-registered entity with independent professional administration, ensuring regulatory compliance and operational transparency.',
+            },
+          ].map((item) => (
+            <div key={item.title} className="flex gap-5">
+              <div className="flex-shrink-0 w-px bg-amber-400/40 self-stretch" />
+              <div>
+                <h3 className="text-white font-serif text-lg mb-2 font-light">{item.title}</h3>
+                <p className="text-slate-400 text-sm leading-relaxed font-light">{item.body}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Philosophy statement */}
         <div className="mt-16 border border-slate-700 p-10 md:p-16 relative">
           <div className="absolute top-0 left-0 w-12 h-12 border-t border-l border-amber-400/40" />
           <div className="absolute bottom-0 right-0 w-12 h-12 border-b border-r border-amber-400/40" />
           <p className="text-slate-300 text-lg md:text-xl font-serif font-light leading-relaxed text-center max-w-3xl mx-auto">
-            "We do not trade markets. We apply systematic methodology to extract consistent,
-            risk-adjusted returns — compounding quietly over time, in service of a legacy
-            that endures beyond any single market cycle."
-          </p>
-          <p className="text-amber-400 text-xs tracking-[0.3em] uppercase text-center mt-6">
-            — 3P Alpha Capital
+            We apply systematic methodology to extract consistent, risk-adjusted returns
+            — compounding quietly over time, in service of a legacy that endures beyond
+            any single market cycle.
           </p>
         </div>
       </div>
@@ -442,66 +419,29 @@ function Contact() {
       <div className="max-w-4xl mx-auto px-6">
         <SectionHeader
           label="Contact"
-          title="Open a Conversation"
+          title="Get in Touch"
         />
 
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Contact info */}
-          <div className="space-y-8">
-            <div>
-              <p className="text-amber-400 text-xs tracking-[0.3em] uppercase mb-3">Enquiries</p>
-              <p className="text-slate-300 font-light">contact@3palphacapital.com</p>
-            </div>
-            <div>
-              <p className="text-amber-400 text-xs tracking-[0.3em] uppercase mb-3">Location</p>
-              <p className="text-slate-400 font-light text-sm leading-relaxed">
-                British Virgin Islands<br />
-                By appointment only
-              </p>
-            </div>
-            <div>
-              <p className="text-amber-400 text-xs tracking-[0.3em] uppercase mb-4">Disclaimer</p>
-              <p className="text-slate-600 text-xs leading-relaxed font-light">
-                3P Alpha Capital is a private investment vehicle. Nothing on this website
-                constitutes investment advice or a solicitation to invest. Past performance
-                is not indicative of future results.
-              </p>
-            </div>
+        <div className="max-w-lg mx-auto text-center space-y-8">
+          <div>
+            <p className="text-amber-400 text-xs tracking-[0.3em] uppercase mb-3">Enquiries</p>
+            <a href="mailto:contact@3palphacapital.com" className="text-slate-300 text-lg font-light hover:text-amber-400 transition-colors">
+              contact@3palphacapital.com
+            </a>
           </div>
-
-          {/* Contact form */}
-          <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-            <div>
-              <label className="text-slate-500 text-xs tracking-widest uppercase block mb-2">Name</label>
-              <input
-                type="text"
-                className="w-full bg-slate-800/50 border border-slate-700 text-slate-200 px-4 py-3 text-sm focus:outline-none focus:border-amber-400/60 transition-colors"
-                placeholder="Your full name"
-              />
-            </div>
-            <div>
-              <label className="text-slate-500 text-xs tracking-widest uppercase block mb-2">Email</label>
-              <input
-                type="email"
-                className="w-full bg-slate-800/50 border border-slate-700 text-slate-200 px-4 py-3 text-sm focus:outline-none focus:border-amber-400/60 transition-colors"
-                placeholder="your@email.com"
-              />
-            </div>
-            <div>
-              <label className="text-slate-500 text-xs tracking-widest uppercase block mb-2">Message</label>
-              <textarea
-                rows={5}
-                className="w-full bg-slate-800/50 border border-slate-700 text-slate-200 px-4 py-3 text-sm focus:outline-none focus:border-amber-400/60 transition-colors resize-none"
-                placeholder="Please introduce yourself and your interest..."
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full py-3 border border-amber-400 text-amber-400 text-xs tracking-[0.2em] uppercase hover:bg-amber-400 hover:text-slate-950 transition-all duration-200"
-            >
-              Send Enquiry
-            </button>
-          </form>
+          <div>
+            <p className="text-amber-400 text-xs tracking-[0.3em] uppercase mb-3">Jurisdiction</p>
+            <p className="text-slate-400 font-light text-sm">
+              British Virgin Islands
+            </p>
+          </div>
+          <div className="pt-8 border-t border-slate-800">
+            <p className="text-slate-600 text-xs leading-relaxed font-light">
+              3P Alpha Capital is a private investment vehicle. Nothing on this website
+              constitutes investment advice or a solicitation to invest. Past performance
+              is not indicative of future results.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -534,7 +474,6 @@ function App() {
       <Hero />
       <About />
       <Heritage />
-      <Structure />
       <Approach />
       <Contact />
       <Footer />
