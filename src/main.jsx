@@ -304,8 +304,8 @@ function Heritage() {
       <div className="max-w-6xl mx-auto px-6">
         <SectionHeader
           label="Operating Experience"
-          title="Heritage of Enterprise"
-          subtitle="A portfolio of operating companies built over decades, each demonstrating disciplined leadership and a commitment to long-term value creation."
+          title="Real Businesses, Real Experience"
+          subtitle="Decades of building businesses from the ground up — across manufacturing, design, property, and consumer goods."
         />
 
         <div className="flex flex-wrap justify-center gap-6">
