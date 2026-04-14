@@ -196,7 +196,7 @@ function Hero() {
         <p className="text-slate-300 text-base sm:text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto">
           Our purpose is to consolidate, preserve, and grow family assets across generations.
           Our mission is to support the education, opportunity, and financial security
-          for our family, and for charitable activities that reflect our values.
+          of our family, and for charitable activities that reflect our values.
         </p>
 
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
