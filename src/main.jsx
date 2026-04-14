@@ -46,7 +46,7 @@ const PILLARS = [
       </svg>
     ),
     description:
-      'Our capital allocation decisions are grounded in a clear, long-term mandate: to preserve and grow wealth responsibly across generations, guided by enduring principles of stewardship.',
+      'Our mission is to preserve and grow wealth responsibly across generations, guided by enduring principles of stewardship.',
   },
   {
     title: 'Precision',
