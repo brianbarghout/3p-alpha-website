@@ -3,7 +3,9 @@
     "allow": [
       "Bash(npm install:*)",
       "Bash(curl:*)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(rm \"C:/Users/Admin/Downloads/main.jsx\")",
+      "Bash(mv \"C:/Users/Admin/Downloads/main \\(2\\).jsx\" \"C:/Users/Admin/Downloads/main.jsx\")"
     ]
   }
 }

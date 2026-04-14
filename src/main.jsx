@@ -46,7 +46,7 @@ const PILLARS = [
       </svg>
     ),
     description:
-      'Every capital allocation decision is grounded in a clear, long-term mandate: to preserve and grow wealth responsibly across generations. We are not driven by short-term performance metrics but by enduring principles of stewardship.',
+      'Our capital allocation decisions are grounded in a clear, long-term mandate: to preserve and grow wealth responsibly across generations, guided by enduring principles of stewardship.',
   },
   {
     title: 'Precision',
@@ -56,7 +56,7 @@ const PILLARS = [
       </svg>
     ),
     description:
-      'Our systematic, quantitative approach applies rigorous methodology to every trade and investment decision. Data-driven analysis and disciplined risk management replace intuition with repeatable, auditable processes.',
+      'Data-driven analysis and disciplined risk management replace intuition with repeatable, auditable processes.',
   },
   {
     title: 'Performance',
@@ -66,7 +66,7 @@ const PILLARS = [
       </svg>
     ),
     description:
-      'Sustained, compounding growth — not volatility — defines our performance standard. By combining capital preservation with strategic deployment, we aim to deliver consistent returns that withstand cycles and compound meaningfully over time.',
+      'Capital preservation first, strategic deployment second — consistent returns that compound meaningfully over time.',
   },
 ]
 
@@ -377,9 +377,8 @@ function Approach() {
           <div className="absolute top-0 left-0 w-12 h-12 border-t border-l border-amber-400/40" />
           <div className="absolute bottom-0 right-0 w-12 h-12 border-b border-r border-amber-400/40" />
           <p className="text-slate-300 text-lg md:text-xl font-serif font-light leading-relaxed text-center max-w-3xl mx-auto">
-            We apply systematic methodology to extract consistent, risk-adjusted returns
-            — compounding quietly over time, in service of a legacy that endures beyond
-            any single market cycle.
+            Growing family capital with discipline and patience — compounding quietly,
+            in service of a legacy that endures.
           </p>
         </div>
       </div>
@@ -410,7 +409,7 @@ function Contact() {
             </p>
           </div>
           <div className="pt-8 border-t border-slate-800">
-            <p className="text-slate-600 text-xs leading-relaxed font-light">
+            <p className="text-slate-400 text-sm leading-relaxed font-light">
               3P Alpha Capital is a private investment vehicle. Nothing on this website
               constitutes investment advice or a solicitation to invest. Past performance
               is not indicative of future results.
