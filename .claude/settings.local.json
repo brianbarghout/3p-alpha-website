@@ -6,7 +6,9 @@
       "Bash(npm run:*)",
       "Bash(rm \"C:/Users/Admin/Downloads/main.jsx\")",
       "Bash(mv \"C:/Users/Admin/Downloads/main \\(2\\).jsx\" \"C:/Users/Admin/Downloads/main.jsx\")",
-      "Bash(ls \"C:/Users/Admin/Downloads/main\"*)"
+      "Bash(ls \"C:/Users/Admin/Downloads/main\"*)",
+      "Bash(ls -t \"C:/Users/Admin/Downloads/\"*main*)",
+      "Bash(ls -t \"C:/Users/Admin/Downloads/\"*principal*)"
     ]
   }
 }
