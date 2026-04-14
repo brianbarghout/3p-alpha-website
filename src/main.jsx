@@ -372,32 +372,6 @@ function Approach() {
           ))}
         </div>
 
-        {/* Operating principles */}
-        <div className="mt-16 grid md:grid-cols-3 gap-8">
-          {[
-            {
-              title: 'Sole Principal',
-              body: 'All investment decisions are made by a single principal with full accountability. No committees, no layers — one decision-maker with direct operational responsibility.',
-            },
-            {
-              title: 'Systematic Methodology',
-              body: 'Entry, exit, position sizing, and risk exposure are governed by quantitative rules. Emotion is removed from the process; discipline and data drive every allocation.',
-            },
-            {
-              title: 'Professional Administration',
-              body: '3P Alpha Capital is a BVI-registered entity with independent professional administration, ensuring regulatory compliance and operational transparency.',
-            },
-          ].map((item) => (
-            <div key={item.title} className="flex gap-5">
-              <div className="flex-shrink-0 w-px bg-amber-400/40 self-stretch" />
-              <div>
-                <h3 className="text-white font-serif text-lg mb-2 font-light">{item.title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed font-light">{item.body}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
         {/* Philosophy statement */}
         <div className="mt-16 border border-slate-700 p-10 md:p-16 relative">
           <div className="absolute top-0 left-0 w-12 h-12 border-t border-l border-amber-400/40" />
