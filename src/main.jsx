@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 
-const NAV_LINKS = ['About', 'Heritage', 'Approach', 'Contact']
+const NAV_LINKS = ['About', 'Heritage', 'Approach']
 
 const COMPANIES = [
   {
@@ -195,22 +195,7 @@ function Hero() {
 
         <p className="text-slate-300 text-base sm:text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto">
           Our purpose is to consolidate, preserve, and grow family assets across generations.
-          Our mission is to support the education, opportunity, and financial security
-          of our family and charitable activities that reflect our values.
         </p>
-
-        <p className="text-slate-400 text-sm sm:text-base font-light leading-relaxed max-w-2xl mx-auto mt-4">
-          We are not accepting outside capital, partners, or client accounts.
-        </p>
-
-        <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="#about"
-            className="px-8 py-3 border border-amber-400 text-amber-400 text-xs tracking-[0.2em] uppercase hover:bg-amber-400 hover:text-slate-950 transition-all duration-200"
-          >
-            Learn More
-          </a>
-        </div>
       </div>
 
       {/* Scroll indicator */}
@@ -272,13 +257,13 @@ function About() {
               industrial property, and consumer goods.
             </p>
             <p className="text-slate-400 leading-relaxed font-light">
-              That depth of hands-on operating experience — building companies from the ground
-              up, managing production at scale, and navigating real-world commercial risk —
-              now informs a systematic, quantitative approach to capital stewardship.
+              3P Alpha Capital is being founded in order to consolidate, preserve, and grow
+              family assets across generations. Its mission is to support the education,
+              opportunity, and financial security of our family and charitable activities
+              that reflect our values.
             </p>
             <p className="text-slate-400 leading-relaxed font-light">
-              3P Alpha Capital is the expression of that philosophy: disciplined risk management,
-              methodical execution, and long-term compounding in service of the next generation.
+              We are not accepting outside capital, partners, or client accounts.
             </p>
 
             <div className="grid grid-cols-3 gap-6 pt-4 border-t border-slate-800">
@@ -384,43 +369,6 @@ function Approach() {
   )
 }
 
-function Contact() {
-  return (
-    <section id="contact" className="py-24 bg-slate-950">
-      <div className="max-w-4xl mx-auto px-6">
-        <SectionHeader
-          label="Contact"
-          title="Get in Touch"
-        />
-
-        <div className="max-w-lg mx-auto text-center space-y-8">
-          <div>
-            <p className="text-amber-400 text-xs tracking-[0.3em] uppercase mb-3">Enquiries</p>
-            <a href="mailto:contact@3palphacapital.com" className="text-slate-300 text-lg font-light hover:text-amber-400 transition-colors">
-              contact@3palphacapital.com
-            </a>
-          </div>
-          <div>
-            <p className="text-amber-400 text-xs tracking-[0.3em] uppercase mb-3">Jurisdiction</p>
-            <p className="text-slate-400 font-light text-sm">
-              British Virgin Islands
-            </p>
-          </div>
-          <div className="pt-8 border-t border-slate-800 space-y-4">
-            <p className="text-slate-400 text-sm leading-relaxed font-light">
-              3P Alpha Capital is a private investment vehicle. Nothing on this website
-              constitutes investment advice or a solicitation to invest. Past performance
-              is not indicative of future results.
-            </p>
-            <p className="text-slate-400 text-sm leading-relaxed font-light">
-              We are not accepting outside capital, partners, or client accounts.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
 
 function Footer() {
   return (
@@ -437,6 +385,16 @@ function Footer() {
         </p>
         <p className="text-slate-700 text-xs">Private &amp; Confidential</p>
       </div>
+      <div className="max-w-6xl mx-auto px-6 mt-6 pt-6 border-t border-slate-800 text-center space-y-2">
+        <p className="text-slate-500 text-xs leading-relaxed font-light">
+          3P Alpha Capital is a private investment vehicle. Nothing on this website
+          constitutes investment advice or a solicitation to invest. Past performance
+          is not indicative of future results.
+        </p>
+        <p className="text-slate-500 text-xs leading-relaxed font-light">
+          We are not accepting outside capital, partners, or client accounts.
+        </p>
+      </div>
     </footer>
   )
 }
@@ -449,7 +407,6 @@ function App() {
       <About />
       <Heritage />
       <Approach />
-      <Contact />
       <Footer />
     </>
   )
