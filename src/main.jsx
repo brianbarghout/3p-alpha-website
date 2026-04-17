@@ -47,7 +47,7 @@ const PILLARS = [
       </svg>
     ),
     description:
-      'Our mission is to preserve and grow wealth responsibly, passing it forward across generations, guided by enduring principles of stewardship.',
+      'Our mission is to preserve and grow wealth responsibly across generations, guided by enduring principles of stewardship.',
   },
   {
     title: 'Precision',
