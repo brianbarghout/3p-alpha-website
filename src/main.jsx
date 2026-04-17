@@ -19,6 +19,7 @@ const COMPANIES = [
     name: 'Bradford Industrial Properties',
     description: '1994–2025. Commercial and industrial property development and management.',
     image: '/images/bradford.jpg',
+    objectPosition: 'bottom',
   },
   {
     name: 'Imago Design',
@@ -303,6 +304,7 @@ function Heritage() {
                   src={company.image}
                   alt={company.name}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  style={company.objectPosition ? { objectPosition: company.objectPosition } : undefined}
                 />
               ) : (
                 <div className="absolute inset-0 bg-slate-800 flex items-center justify-center">
