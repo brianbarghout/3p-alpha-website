@@ -311,7 +311,7 @@ function Heritage() {
               )}
 
               {/* Gradient overlay for readability */}
-              <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, #020617 0%, rgba(2,6,23,0.7) 22%, transparent 35%)' }} />
+              <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(2,6,23,0.88) 0%, rgba(2,6,23,0.80) 25%, rgba(2,6,23,0.30) 35%, transparent 35%)' }} />
 
               {/* Text overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-6">
