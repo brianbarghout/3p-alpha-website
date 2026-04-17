@@ -252,7 +252,7 @@ function About() {
             <p className="text-amber-400 text-xs tracking-[0.2em] uppercase mt-1">BSc Chemical Engineering · FRSA</p>
             <div className="w-8 h-px bg-amber-400 mt-4" />
             <p className="text-slate-400 leading-relaxed font-light">
-              A chemical engineer by training, Brian has spent over four decades founding,
+              A chemical engineer by training, Brian Barghout has spent over four decades founding,
               operating, and scaling businesses across manufacturing, product design,
               industrial property, and consumer goods.
             </p>
