@@ -257,7 +257,7 @@ function About() {
               industrial property, and consumer goods.
             </p>
             <p className="text-slate-400 leading-relaxed font-light">
-              3P Alpha Capital is being founded in order to consolidate, preserve, and grow
+              3P Alpha Capital was founded to consolidate, preserve, and grow
               family assets across generations. Its mission is to support the education,
               opportunity, and financial security of our family and charitable activities
               that reflect our values.
