@@ -91,9 +91,9 @@ function NavBar() {
         {/* Logo */}
         <a href="#" className="flex items-center group">
           <img
-            src="/images/logo.jpeg"
+            src="/images/logo.png"
             alt="3P Alpha Capital"
-            style={{ height: '60px', mixBlendMode: 'multiply', filter: 'invert(1) sepia(1) saturate(3) hue-rotate(5deg) brightness(0.9)' }}
+            style={{ height: '60px', filter: 'invert(1) sepia(1) saturate(3) hue-rotate(5deg) brightness(0.9)' }}
           />
         </a>
 
