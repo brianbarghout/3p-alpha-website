@@ -89,13 +89,12 @@ function NavBar() {
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3 group">
-          <div className="w-9 h-9 border border-amber-400 flex items-center justify-center">
-            <span className="text-amber-400 font-serif text-sm font-bold tracking-widest">3P</span>
-          </div>
-          <span className="hidden sm:block text-lg tracking-[0.2em] text-slate-300 font-light">
-            ALPHA CAPITAL LIMITED
-          </span>
+        <a href="#" className="flex items-center group">
+          <img
+            src="/images/3paclogo.png"
+            alt="3P Alpha Capital"
+            style={{ height: '80px', filter: 'invert(1) sepia(1) saturate(3) hue-rotate(5deg) brightness(0.85)' }}
+          />
         </a>
 
         {/* Desktop links */}
