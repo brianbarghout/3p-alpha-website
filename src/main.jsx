@@ -93,7 +93,7 @@ function NavBar() {
           <img
             src="/images/logo.jpeg"
             alt="3P Alpha Capital"
-            style={{ height: '160px', filter: 'invert(1) sepia(1) saturate(3) hue-rotate(5deg) brightness(0.85)' }}
+            style={{ height: '320px', filter: 'invert(1) sepia(1) saturate(3) hue-rotate(5deg) brightness(0.85)' }}
           />
         </a>
 
