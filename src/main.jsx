@@ -363,6 +363,9 @@ function Approach() {
             Growing family capital with discipline and patience — compounding quietly,
             in service of a legacy that endures.
           </p>
+          <p className="text-slate-400 text-sm font-light leading-relaxed text-center max-w-3xl mx-auto mt-6">
+            We are not accepting outside capital, partners, or client accounts.
+          </p>
         </div>
       </div>
     </section>
