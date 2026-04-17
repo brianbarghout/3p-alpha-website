@@ -93,7 +93,7 @@ function NavBar() {
             <span className="text-amber-400 font-serif text-sm font-bold tracking-widest">3P</span>
           </div>
           <span className="hidden sm:block text-lg tracking-[0.2em] text-slate-300 font-light">
-            ALPHA CAPITAL LIMITed
+            ALPHA CAPITAL LIMITED
           </span>
         </a>
 
