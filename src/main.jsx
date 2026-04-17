@@ -210,12 +210,6 @@ function Hero() {
           >
             Learn More
           </a>
-          <a
-            href="#contact"
-            className="px-8 py-3 text-slate-400 text-xs tracking-[0.2em] uppercase hover:text-white transition-colors duration-200"
-          >
-            Get in Touch
-          </a>
         </div>
       </div>
 
