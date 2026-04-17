@@ -181,7 +181,7 @@ function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <p className="text-amber-400 text-xs tracking-[0.4em] uppercase mb-8 font-light">
+        <p className="text-amber-400 text-base tracking-[0.4em] uppercase mb-8 font-semibold">
           3P Alpha Capital
         </p>
 
