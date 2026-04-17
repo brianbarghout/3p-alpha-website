@@ -249,7 +249,7 @@ function About() {
           {/* Bio */}
           <div className="space-y-6">
             <h3 className="font-serif text-2xl text-white font-light">Brian Barghout</h3>
-            <p className="text-amber-400 text-xs tracking-[0.2em] uppercase mt-1">BSc Chemical Engineering</p>
+            <p className="text-amber-400 text-xs tracking-[0.2em] uppercase mt-1"><span style={{ textTransform: 'none' }}>BSc</span> Chemical Engineering</p>
             <div className="w-8 h-px bg-amber-400 mt-4" />
             <p className="text-slate-400 leading-relaxed font-light">
               A chemical engineer by training, Brian Barghout has spent over four decades founding,
