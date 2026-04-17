@@ -89,11 +89,11 @@ function NavBar() {
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center group">
+        <a href="#" className="flex items-center group" style={{ background: 'transparent', border: 'none' }}>
           <img
             src="/images/logo.png"
             alt="3P Alpha Capital"
-            style={{ height: '60px', filter: 'invert(1) sepia(1) saturate(3) hue-rotate(5deg) brightness(0.9)' }}
+            style={{ height: '60px', background: 'transparent', border: 'none', filter: 'sepia(1) saturate(3) hue-rotate(5deg) brightness(0.9)' }}
           />
         </a>
 
