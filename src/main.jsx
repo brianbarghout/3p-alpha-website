@@ -194,7 +194,7 @@ function Hero() {
         <div className="w-16 h-px bg-amber-400 mx-auto mb-8" />
 
         <p className="text-slate-300 text-base sm:text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto">
-          Our purpose is to consolidate, preserve, and grow family assets across generations.
+          Our purpose is to consolidate, preserve, and grow our assets to support the education, opportunity, and financial security of our family and charitable activities that reflect our values.
         </p>
       </div>
 
@@ -228,7 +228,7 @@ function About() {
     <section id="about" className="py-24 bg-slate-950">
       <div className="max-w-6xl mx-auto px-6">
         <SectionHeader
-          label="About the Principal"
+          label="About the Founder"
           title="Grounded in Experience"
           subtitle="A track record built across multiple industries and decades of operational leadership."
         />
@@ -263,7 +263,7 @@ function About() {
               that reflect our values.
             </p>
             <p className="text-slate-400 leading-relaxed font-light">
-              We are not accepting outside capital, partners, or client accounts.
+              The company is not seeking or accepting outside capital, partners, or client accounts.
             </p>
 
             <div className="grid grid-cols-3 gap-6 pt-4 border-t border-slate-800">
@@ -360,11 +360,10 @@ function Approach() {
           <div className="absolute top-0 left-0 w-12 h-12 border-t border-l border-amber-400/40" />
           <div className="absolute bottom-0 right-0 w-12 h-12 border-b border-r border-amber-400/40" />
           <p className="text-slate-300 text-lg md:text-xl font-serif font-light leading-relaxed text-center max-w-3xl mx-auto">
-            Growing family capital with discipline and patience — compounding quietly,
-            in service of a legacy that endures.
+            Building and preserving family capital across generations — so that those who come after us inherit not just wealth, but opportunity.
           </p>
           <p className="text-slate-400 text-sm font-light leading-relaxed text-center max-w-3xl mx-auto mt-6">
-            We are not accepting outside capital, partners, or client accounts.
+            The company is not seeking or accepting outside capital, partners, or client accounts.
           </p>
         </div>
       </div>
@@ -391,11 +390,10 @@ function Footer() {
       <div className="max-w-6xl mx-auto px-6 mt-6 pt-6 border-t border-slate-800 text-center space-y-2">
         <p className="text-slate-500 text-xs leading-relaxed font-light">
           3P Alpha Capital is a private investment vehicle. Nothing on this website
-          constitutes investment advice or a solicitation to invest. Past performance
-          is not indicative of future results.
+          constitutes investment advice or a solicitation to invest.
         </p>
         <p className="text-slate-500 text-xs leading-relaxed font-light">
-          We are not accepting outside capital, partners, or client accounts.
+          The company is not seeking or accepting outside capital, partners, or client accounts.
         </p>
       </div>
     </footer>
