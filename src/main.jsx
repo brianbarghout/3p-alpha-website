@@ -28,7 +28,7 @@ const COMPANIES = [
   },
   {
     name: 'Wicked Works',
-    description: '2002–2004. Hand-cast bronze motorcyle shifter linkages I designed, sand-cast, and chrome-finished each piece.',
+    description: '2002–2004. Hand-cast bronze motorcycle shifter linkages I designed, sand-cast, and chrome-finished each piece.',
     image: '/images/wickedworks.jpg',
   },
   {
@@ -258,7 +258,7 @@ function About() {
             </p>
             <p className="text-slate-400 leading-relaxed font-light">
               3P Alpha Capital was founded to consolidate, preserve, and grow
-              family assets across generations. Its mission is to support the education,
+              family assets across generations. Our mission is to support the education,
               opportunity, and financial security of our family and charitable activities
               that reflect our values.
             </p>
