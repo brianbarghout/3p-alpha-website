@@ -314,7 +314,7 @@ function Heritage() {
               <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(2,6,23,0.88) 0%, rgba(2,6,23,0.80) 25%, rgba(2,6,23,0.30) 35%, transparent 35%)' }} />
 
               {/* Text overlay */}
-              <div className="absolute bottom-0 left-0 right-0 p-6">
+              <div className="absolute bottom-0 left-0 right-0 px-6 pb-3 pt-6">
                 <div className="flex items-baseline gap-2 mb-1">
                   <span className="text-amber-400/50 font-serif text-lg font-light">{String(i + 1).padStart(2, '0')}</span>
                   <h3 className="font-serif text-xl text-white font-light">{company.name}</h3>
