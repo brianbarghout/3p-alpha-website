@@ -92,8 +92,8 @@ function NavBar() {
           <div className="w-9 h-9 border border-amber-400 flex items-center justify-center">
             <span className="text-amber-400 font-serif text-sm font-bold tracking-widest">3P</span>
           </div>
-          <span className="hidden sm:block text-sm tracking-[0.2em] text-slate-300 uppercase font-light">
-            Alpha Capital
+          <span className="hidden sm:block text-lg tracking-[0.2em] text-slate-300 font-light">
+            ALPHA CapITAL LIMITed
           </span>
         </a>
 
