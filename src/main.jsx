@@ -27,7 +27,7 @@ const COMPANIES = [
   },
   {
     name: 'Wicked Works',
-    description: '2002–2004. Hand-cast bronze Harley Davidson shifter linkages — designed, sand-cast, and chrome-finished. Each piece individually made.',
+    description: '2002–2004. Hand-cast bronze motorcyle shifter linkages I designed, sand-cast, and chrome-finished each piece.',
     image: '/images/wickedworks.jpg',
   },
   {
