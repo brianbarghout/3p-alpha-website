@@ -377,11 +377,12 @@ function Footer() {
   return (
     <footer className="bg-slate-950 border-t border-slate-800 py-8">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <div className="w-7 h-7 border border-amber-400/60 flex items-center justify-center">
-            <span className="text-amber-400/60 font-serif text-xs font-bold">3P</span>
-          </div>
-          <span className="text-slate-600 text-xs tracking-widest uppercase">Alpha Capital</span>
+        <div className="flex items-center">
+          <img
+            src="/images/logo.png"
+            alt="3P Alpha Capital"
+            style={{ height: '50px', background: 'transparent', border: 'none', filter: 'brightness(0) saturate(100%) invert(72%) sepia(55%) saturate(400%) hue-rotate(5deg) brightness(95%)' }}
+          />
         </div>
         <p className="text-slate-700 text-xs tracking-wider text-center">
           &copy; {new Date().getFullYear()} 3P Alpha Capital. All rights reserved.
