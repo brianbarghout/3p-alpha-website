@@ -90,11 +90,13 @@ function NavBar() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center group">
-          <img
-            src="/images/logo.jpeg"
-            alt="3P Alpha Capital"
-            style={{ height: '60px', filter: 'invert(1) sepia(1) saturate(3) hue-rotate(5deg) brightness(0.85)', mixBlendMode: 'screen' }}
-          />
+          <div style={{ height: '60px', width: '120px', overflow: 'hidden' }}>
+            <img
+              src="/images/logo.jpeg"
+              alt="3P Alpha Capital"
+              style={{ height: '180px', marginTop: '-48px', filter: 'invert(1) sepia(1) saturate(3) hue-rotate(5deg) brightness(0.85)', mixBlendMode: 'screen' }}
+            />
+          </div>
         </a>
 
         {/* Desktop links */}
