@@ -418,7 +418,7 @@ function Contact() {
               constitutes investment advice or a solicitation to invest. Past performance
               is not indicative of future results.
             </p>
-            <p className="text-slate-300 text-sm leading-relaxed font-light">
+            <p className="text-slate-400 text-sm leading-relaxed font-light">
               We are not accepting outside capital, partners, or client accounts.
             </p>
           </div>
