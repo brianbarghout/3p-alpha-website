@@ -199,6 +199,10 @@ function Hero() {
           of our family and charitable activities that reflect our values.
         </p>
 
+        <p className="text-slate-400 text-sm sm:text-base font-light leading-relaxed max-w-2xl mx-auto mt-4">
+          We are not accepting outside capital, partners, or client accounts.
+        </p>
+
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="#about"
@@ -408,11 +412,14 @@ function Contact() {
               British Virgin Islands
             </p>
           </div>
-          <div className="pt-8 border-t border-slate-800">
+          <div className="pt-8 border-t border-slate-800 space-y-4">
             <p className="text-slate-400 text-sm leading-relaxed font-light">
               3P Alpha Capital is a private investment vehicle. Nothing on this website
               constitutes investment advice or a solicitation to invest. Past performance
               is not indicative of future results.
+            </p>
+            <p className="text-slate-300 text-sm leading-relaxed font-light">
+              We are not accepting outside capital, partners, or client accounts.
             </p>
           </div>
         </div>
