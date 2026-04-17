@@ -8,7 +8,15 @@
       "Bash(mv \"C:/Users/Admin/Downloads/main \\(2\\).jsx\" \"C:/Users/Admin/Downloads/main.jsx\")",
       "Bash(ls \"C:/Users/Admin/Downloads/main\"*)",
       "Bash(ls -t \"C:/Users/Admin/Downloads/\"*main*)",
-      "Bash(ls -t \"C:/Users/Admin/Downloads/\"*principal*)"
+      "Bash(ls -t \"C:/Users/Admin/Downloads/\"*principal*)",
+      "Bash(git check-ignore:*)",
+      "Bash(md5sum /c/Users/Admin/3p-alpha-website/public/images/*.jpg)",
+      "Bash(git fetch:*)",
+      "Bash(mkdir -p /c/Users/Admin/3p-alpha-website/public/images)",
+      "Read(//c/Users/Admin/Downloads/**)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
     ]
   }
 }
