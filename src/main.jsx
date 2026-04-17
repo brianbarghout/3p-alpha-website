@@ -311,15 +311,15 @@ function Heritage() {
               )}
 
               {/* Gradient overlay for readability */}
-              <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, #020617 0%, rgba(2,6,23,0.6) 12%, transparent 25%)' }} />
+              <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, #020617 0%, rgba(2,6,23,0.7) 18%, transparent 25%)' }} />
 
               {/* Text overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <p className="text-amber-400/50 font-serif text-2xl mb-2 font-light">
-                  {String(i + 1).padStart(2, '0')}
-                </p>
-                <h3 className="font-serif text-xl text-white mb-2 font-light">{company.name}</h3>
-                <div className="w-6 h-px bg-amber-400/60 mb-3 group-hover:bg-amber-400 transition-colors duration-300" />
+                <div className="flex items-baseline gap-2 mb-1">
+                  <span className="text-amber-400/50 font-serif text-lg font-light">{String(i + 1).padStart(2, '0')}</span>
+                  <h3 className="font-serif text-xl text-white font-light">{company.name}</h3>
+                </div>
+                <div className="w-6 h-px bg-amber-400/60 mb-2 group-hover:bg-amber-400 transition-colors duration-300" />
                 <p className="text-slate-300 text-sm leading-relaxed font-light">{company.description}</p>
               </div>
             </div>
