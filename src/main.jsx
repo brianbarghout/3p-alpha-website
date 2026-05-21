@@ -21,21 +21,6 @@ const COMPANIES = [
     image: '/images/bradford.jpg',
     objectPosition: 'bottom',
   },
-  {
-    name: 'Imago Design',
-    description: '1997–1998. Creative product design and development — from concept to mass production.',
-    image: '/images/imago.jpg',
-  },
-  {
-    name: 'Wicked Works',
-    description: '2002–2004. Hand-cast bronze motorcycle shifter linkages I designed, sand-cast, and chrome-finished each piece.',
-    image: '/images/wickedworks.jpg',
-  },
-  {
-    name: 'Littlecote Soap',
-    description: '2014–2016. Artisan toiletries and natural soaps — handmade in North Yorkshire.',
-    image: '/images/littlecote.jpg',
-  },
 ]
 
 const PILLARS = [
@@ -267,7 +252,7 @@ function About() {
             </p>
 
             <div className="grid grid-cols-3 gap-6 pt-4 border-t border-slate-800">
-              {[['40+', 'Years Operating'], ['6', 'Companies Built'], ['Multi-Gen', 'Focus']].map(([val, lbl]) => (
+              {[['30+', 'Years Operating'], ['3', 'Companies Built'], ['Multi-Gen', 'Focus']].map(([val, lbl]) => (
                 <div key={lbl} className="text-center">
                   <p className="text-amber-400 font-serif text-xl mb-1">{val}</p>
                   <p className="text-slate-500 text-xs tracking-wider uppercase">{lbl}</p>
@@ -317,7 +302,7 @@ function Heritage() {
               {/* Text overlay */}
               <div className="absolute bottom-0 left-0 right-0 px-6 pb-3 pt-6">
                 <div className="flex items-baseline gap-2 mb-1">
-                  <span className="text-amber-400/50 font-serif text-lg font-light">{String(i + 1).padStart(2, '0')}</span>
+                  <span className="text-amber-400/50 font-serif text-lg font-light" style={{ textShadow: '0 1px 4px rgba(2,6,23,0.9), 0 0 8px rgba(2,6,23,0.7)' }}>{String(i + 1).padStart(2, '0')}</span>
                   <h3 className="font-serif text-xl text-white font-light">{company.name}</h3>
                 </div>
                 <div className="w-6 h-px bg-amber-400/60 mb-2 group-hover:bg-amber-400 transition-colors duration-300" />
@@ -396,6 +381,9 @@ function Footer() {
         </p>
         <p className="text-slate-500 text-xs leading-relaxed font-light">
           The company is not seeking or accepting outside capital, partners, or client accounts.
+        </p>
+        <p className="text-slate-600 text-xs leading-relaxed font-light mt-2">
+          Registered Office: 3P Alpha Capital Ltd &middot; 4th Floor, Omar Hodge Building &middot; Road Town, Tortola &middot; British Virgin Islands &middot; Company No. 2205767
         </p>
       </div>
     </footer>
