@@ -382,7 +382,7 @@ function Footer() {
         <p className="text-slate-500 text-xs leading-relaxed font-light">
           The company is not seeking or accepting outside capital, partners, or client accounts.
         </p>
-        <p className="text-slate-600 text-xs leading-relaxed font-light mt-2">
+        <p className="text-slate-400 text-xs leading-relaxed font-light mt-2">
           Registered Office: 3P Alpha Capital Ltd &middot; 4th Floor, Omar Hodge Building &middot; Road Town, Tortola &middot; British Virgin Islands &middot; Company No. 2205767
         </p>
       </div>
