@@ -280,7 +280,7 @@ function Heritage() {
           {COMPANIES.map((company, i) => (
             <div
               key={company.name}
-              className="group relative overflow-hidden h-72 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] hover:scale-[1.02] transition-transform duration-300"
+              className="group relative overflow-hidden h-72 w-full hover:scale-[1.02] transition-transform duration-300"
             >
               {/* Background image */}
               {company.image ? (
