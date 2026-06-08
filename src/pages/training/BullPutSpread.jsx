@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useMemo } from "react";
+import { Link } from "react-router-dom";
 
 // ── Constants ────────────────────────────────────────────────────────────────
 const PREMIUM          = 0.70;
@@ -325,6 +326,7 @@ export default function BullPutSpread() {
       {/* ══ TITLE + ℹ ══════════════════════════════════════════════════════ */}
       <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:6 }}>
         <div>
+          <Link to="/training" style={{ fontSize:11, color:C.muted, textDecoration:"none", marginRight:12 }}>← Training</Link>
           <span style={{ fontSize:11, color:C.accent, textTransform:"uppercase", letterSpacing:"0.12em" }}>3PAC Training Library &nbsp;·&nbsp; </span>
           <span style={{ fontSize:16, fontWeight:800, color:C.text }}>Bull Put Spread Simulation</span>
         </div>

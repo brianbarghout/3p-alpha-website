@@ -48,6 +48,9 @@ export default function Training() {
     <div className="min-h-screen bg-gray-950 text-gray-100 p-6 font-sans">
       <div className="max-w-3xl mx-auto">
         <div className="mb-10">
+          <Link to="/" className="inline-flex items-center gap-1 text-xs text-gray-500 hover:text-amber-400 transition-colors mb-6 tracking-wide">
+            ← Home
+          </Link>
           <p className="text-xs tracking-widest text-amber-400 uppercase mb-2">
             3P Alpha Capital
           </p>
