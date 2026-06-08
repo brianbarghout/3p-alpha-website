@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
+import { BrowserRouter, Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom'
+import Training from './pages/training/Training'
+import BullPutSpread from './pages/training/BullPutSpread'
 import './index.css'
 
 const NAV_LINKS = ['About', 'Heritage', 'Approach']
@@ -59,12 +62,27 @@ const PILLARS = [
 function NavBar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  function handleAnchorClick(e, sectionId) {
+    if (location.pathname !== '/') {
+      e.preventDefault()
+      navigate('/')
+      setTimeout(() => {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
+      }, 50)
+    }
+    setMenuOpen(false)
+  }
+
+  const onTraining = location.pathname.startsWith('/training')
 
   return (
     <nav
@@ -74,13 +92,13 @@ function NavBar() {
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center group" style={{ background: 'transparent', border: 'none' }}>
+        <Link to="/" className="flex items-center group" style={{ background: 'transparent', border: 'none' }}>
           <img
             src="/images/logo.png"
             alt="3P Alpha Capital"
             style={{ height: '60px', background: 'transparent', border: 'none', filter: 'brightness(0) saturate(100%) invert(72%) sepia(55%) saturate(400%) hue-rotate(5deg) brightness(95%)' }}
           />
-        </a>
+        </Link>
 
         {/* Desktop links */}
         <ul className="hidden md:flex items-center gap-8">
@@ -88,12 +106,23 @@ function NavBar() {
             <li key={link}>
               <a
                 href={`#${link.toLowerCase()}`}
+                onClick={(e) => handleAnchorClick(e, link.toLowerCase())}
                 className="text-xs tracking-[0.15em] uppercase text-slate-400 hover:text-amber-400 transition-colors duration-200"
               >
                 {link}
               </a>
             </li>
           ))}
+          <li>
+            <Link
+              to="/training"
+              className={`text-xs tracking-[0.15em] uppercase transition-colors duration-200 ${
+                onTraining ? 'text-amber-400' : 'text-slate-400 hover:text-amber-400'
+              }`}
+            >
+              Training
+            </Link>
+          </li>
         </ul>
 
         {/* Mobile hamburger */}
@@ -120,13 +149,24 @@ function NavBar() {
               <li key={link}>
                 <a
                   href={`#${link.toLowerCase()}`}
+                  onClick={(e) => handleAnchorClick(e, link.toLowerCase())}
                   className="text-sm tracking-[0.15em] uppercase text-slate-400 hover:text-amber-400 transition-colors duration-200"
-                  onClick={() => setMenuOpen(false)}
                 >
                   {link}
                 </a>
               </li>
             ))}
+            <li>
+              <Link
+                to="/training"
+                onClick={() => setMenuOpen(false)}
+                className={`text-sm tracking-[0.15em] uppercase transition-colors duration-200 ${
+                  onTraining ? 'text-amber-400' : 'text-slate-400 hover:text-amber-400'
+                }`}
+              >
+                Training
+              </Link>
+            </li>
           </ul>
         </div>
       )}
@@ -392,14 +432,25 @@ function Footer() {
 
 function App() {
   return (
-    <>
-      <NavBar />
-      <Hero />
-      <About />
-      <Heritage />
-      <Approach />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <NavBar />
+              <Hero />
+              <About />
+              <Heritage />
+              <Approach />
+              <Footer />
+            </>
+          }
+        />
+        <Route path="/training" element={<Training />} />
+        <Route path="/training/bull-put-spread" element={<BullPutSpread />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
