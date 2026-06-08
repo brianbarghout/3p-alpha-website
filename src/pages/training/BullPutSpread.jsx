@@ -190,7 +190,7 @@ function EquityCurve({ trades, mcLines, totalTrades }) {
 // ── Distribution histogram ────────────────────────────────────────────────────
 function DistributionChart({ finals }) {
   if (!finals.length) return null;
-  const W=560,H=80,pad=8,BINS=40;
+  const W=560, H=100, pad=8, padB=22, BINS=40;
   const min=finals[0], max=finals[finals.length-1];
   const binW=(max-min)/BINS||1;
   const bins=Array(BINS).fill(0);
@@ -198,15 +198,41 @@ function DistributionChart({ finals }) {
   const maxC=Math.max(...bins);
   const barW=(W-pad*2)/BINS;
   const zeroX=pad+((STARTING_BALANCE-min)/(max-min))*(W-pad*2);
+  const chartH = H - padB;
+
+  // X axis ticks — 6 evenly spaced dollar values
+  const tickCount = 6;
+  const ticks = Array.from({length: tickCount}, (_,i) => {
+    const val = min + (i/(tickCount-1))*(max-min);
+    const x   = pad + (i/(tickCount-1))*(W-pad*2);
+    return { val: Math.round(val), x };
+  });
+
   return (
     <svg width="100%" viewBox={`0 0 ${W} ${H}`} style={{ display:"block" }}>
+      {/* Bars */}
       {bins.map((c,i)=>{
         const x=pad+i*barW, mid=min+(i+0.5)*binW;
-        const h=c?Math.max(3,(c/maxC)*(H-pad*2)):0;
-        return <rect key={i} x={x+0.5} y={H-pad-h} width={Math.max(1,barW-1)} height={h}
+        const h=c?Math.max(3,(c/maxC)*(chartH-pad)):0;
+        return <rect key={i} x={x+0.5} y={chartH-h} width={Math.max(1,barW-1)} height={h}
           fill={mid>=STARTING_BALANCE?C.win:C.loss} opacity={0.75} rx={1}/>;
       })}
-      <line x1={zeroX} y1={pad} x2={zeroX} y2={H-pad} stroke={C.accent} strokeWidth="1.5" strokeDasharray="4,2"/>
+      {/* Start balance gold line */}
+      <line x1={zeroX} y1={pad} x2={zeroX} y2={chartH} stroke={C.accent} strokeWidth="1.5" strokeDasharray="4,2"/>
+      {/* X axis baseline */}
+      <line x1={pad} y1={chartH} x2={W-pad} y2={chartH} stroke={C.border} strokeWidth="0.8"/>
+      {/* X axis tick marks and labels */}
+      {ticks.map(({val,x})=>(
+        <g key={val}>
+          <line x1={x} y1={chartH} x2={x} y2={chartH+3} stroke={C.muted} strokeWidth="0.8"/>
+          <text x={x} y={H-2} textAnchor="middle" fontSize="8" fill={C.muted} fontFamily="monospace">
+            ${val>=1000?`${(val/1000).toFixed(1)}k`:val}
+          </text>
+        </g>
+      ))}
+      {/* Gold line label */}
+      <rect x={zeroX+3} y={pad} width={38} height={11} fill={C.bg}/>
+      <text x={zeroX+5} y={pad+8} fontSize="7.5" fill={C.accent} fontWeight="700">$1,000 start</text>
     </svg>
   );
 }
@@ -596,10 +622,10 @@ export default function BullPutSpread() {
         {showDist&&(
           <>
             <DistributionChart finals={dist.finals}/>
-            <div style={{ display:"flex", justifyContent:"space-between", fontSize:10, color:C.muted, marginTop:3 }}>
-              <span>Worst: ${dist.worst.toFixed(0)}</span>
-              <span>Each bar = cluster of outcomes</span>
-              <span>Best: ${dist.best.toFixed(0)}</span>
+            <div style={{ display:"flex", justifyContent:"space-between", fontSize:10, color:C.muted, marginTop:4 }}>
+              <span style={{ color:C.loss }}>◀ Losses (left of gold line)</span>
+              <span>Each bar = a cluster of people who ended with that balance</span>
+              <span style={{ color:C.win }}>Profits ▶ (right of gold line)</span>
             </div>
             <div style={{ marginTop:8, fontSize:11, color:C.muted, lineHeight:1.7 }}>
               {stopMode==="2x"
