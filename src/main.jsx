@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter, Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Link, Navigate, useNavigate, useLocation } from 'react-router-dom'
 import Training from './pages/training/Training'
 import BullPutSpread from './pages/training/BullPutSpread'
 import './index.css'
@@ -82,8 +82,6 @@ function NavBar() {
     setMenuOpen(false)
   }
 
-  const onTraining = location.pathname.startsWith('/training')
-
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -113,16 +111,6 @@ function NavBar() {
               </a>
             </li>
           ))}
-          <li>
-            <Link
-              to="/training"
-              className={`text-xs tracking-[0.15em] uppercase transition-colors duration-200 ${
-                onTraining ? 'text-amber-400' : 'text-slate-400 hover:text-amber-400'
-              }`}
-            >
-              Training
-            </Link>
-          </li>
         </ul>
 
         {/* Mobile hamburger */}
@@ -156,17 +144,6 @@ function NavBar() {
                 </a>
               </li>
             ))}
-            <li>
-              <Link
-                to="/training"
-                onClick={() => setMenuOpen(false)}
-                className={`text-sm tracking-[0.15em] uppercase transition-colors duration-200 ${
-                  onTraining ? 'text-amber-400' : 'text-slate-400 hover:text-amber-400'
-                }`}
-              >
-                Training
-              </Link>
-            </li>
           </ul>
         </div>
       )}
@@ -447,8 +424,14 @@ function App() {
             </>
           }
         />
-        <Route path="/training" element={<Training />} />
-        <Route path="/training/bull-put-spread" element={<BullPutSpread />} />
+        {/* Training library: local development only, never on the published site */}
+        {import.meta.env.DEV && <Route path="/training" element={<Training />} />}
+        {import.meta.env.DEV && (
+          <Route path="/training/bull-put-spread" element={<BullPutSpread />} />
+        )}
+
+        {/* Anything else goes to the homepage */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
   )
