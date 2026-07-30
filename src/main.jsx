@@ -82,6 +82,11 @@ function NavBar() {
     setMenuOpen(false)
   }
 
+  function handleLogoClick() {
+    setMenuOpen(false)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -90,7 +95,7 @@ function NavBar() {
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center group" style={{ background: 'transparent', border: 'none' }}>
+        <Link to="/" onClick={handleLogoClick} className="flex items-center group" style={{ background: 'transparent', border: 'none' }}>
           <img
             src="/images/logo.png"
             alt="3P Alpha Capital"
